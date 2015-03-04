@@ -5,6 +5,7 @@
   ],
   "helpers": [
     "helpers/**/*.js",
-    "../extension/Files/**/*.js"
+    "../extension/Files/js/*.js",
+    "../extension/Files/js/**/*.js"
   ]
 }
