@@ -1,13 +1,15 @@
-h1. Requirements
+# Requirements
+
 * Node.js
-** npm
+  * npm
 * PhantomJS somewhere in your path.
 
-h1. Installation
+# Installation
+
 * Install requirements (Node+npm, Phantom).
 * Run `npm install` in the root directory to install required packages (Karma, Jasmine, assorted support).
 
-h1. Usage
+# Usage
 
 The app can be found in the extension directory (i.e. select this directory when using "load unpacked extension" in Overwolf dev tools).
 
