@@ -28,14 +28,44 @@
                 });
             };
         </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          $(document).ready(function($) {
+            $('#accordion').find('.accordion-toggle').click(function(){
+
+              //Expand or collapse this panel
+              $(this).next().slideToggle('fast');
+
+              //Hide the other panels
+              $(".accordion-content").not($(this).next()).slideUp('fast');
+
+            });
+          });
+        </script>
+        <style>
+          .accordion-toggle {cursor: pointer;}
+          .accordion-content {display: none;}
+          .accordion-content.default {display: block;}
+        </style>
     </head>
 
     <body>
         <div style="width:20px; height:20px; bottom:0; right:0; position:absolute;" onmousedown="dragResize('BottomRight');"></div>
         <div id="content" onmousedown="dragMove();">
-            <h1>Hello, world!</h1>
-            <p>You can drag from anywhere you want, and resize from bottom right corner.</p>
-            <button id="close" onclick="closeWindow();">Close</button>
+          <div id="accordion">
+            <h4 class="accordion-toggle">Accordion 1</h4>
+            <div class="accordion-content default">
+              <p>Cras malesuada ultrices augue molestie risus.</p>
+            </div>
+            <h4 class="accordion-toggle">Accordion 2</h4>
+            <div class="accordion-content">
+              <p>Lorem ipsum dolor sit amet mauris eu turpis.</p>
+            </div>
+            <h4 class="accordion-toggle">Accordion 3</h4>
+            <div class="accordion-content">
+              <p>Vivamus facilisisnibh scelerisque laoreet.</p>
+            </div>
+          </div>
         </div>
     </body>
 </html>
